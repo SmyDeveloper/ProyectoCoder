@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+
+{% block contenidoQueCambia %}
+
+    <!-- Aquí va lo que cambia, y lo asociado a esta vista-->
+    {%if miFormulario.errors %}
+
+    <p style= "color: red";> Están mal los datos por favor revisar </p>
+ 
+    {% endif %}
+ 
+    <form action="" method="POST"> {% csrf_token %}
+ 
+        <table>
+ 
+             {{ miFormulario.as_table }}
+ 
+        </table>
+ 
+        <input type="Submit" value="Enviar">
+    </form>
+     
+
+{% endblock %}
+
