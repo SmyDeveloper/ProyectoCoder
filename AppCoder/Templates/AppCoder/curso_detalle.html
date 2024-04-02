@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h1> Detalle Curso </h1>
+
+<p> Nombre del curso: <i>{{curso.nombre}}</i></p>
+<p> Camada: <i>{{curso.camada}}</i></p>
+<p>
+    <a href="{% url 'ListaCursos' %}"> Regresar </a>
+
+</p>
+
+{% endblock contenidoQueCambia %}
