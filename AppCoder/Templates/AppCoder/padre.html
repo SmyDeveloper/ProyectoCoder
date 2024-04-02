@@ -27,6 +27,9 @@
                 <a class="navbar-brand" href="{% url 'Entregables' %}">Entregables</a>
                 <a class="btn-btn primary" href="#NADAAUN">Iniciar</a>
                 {% if not request.user.is_authenticated %}
+                    {% if request.user.avatar %}
+                    <img src="{{ request.user.avatar.imagen.url }}" alt="" heigth="40px">
+                    {% endif %}
                 <a class="btn-btn primary" href="{% url 'Login' %}">Login</a>
                 <a class="btn-btn primary" href="{% url 'Register' %}">Registrar</a>
                 {% else %}
